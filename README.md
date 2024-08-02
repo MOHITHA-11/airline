@@ -1,19 +1,33 @@
-Online airline ticketing saves time and money for the customer as well as the airline company thereby making air travel more customer-centric. This project is an attempt to simulate the basic concepts of an airline reservation system.
+# Airline Reservation System
 
-Our airline ticket reservation system has the following features:-
+This repository contains the code for an Airline Reservation System built using PHP and MySQL. The system allows users to book flights, view booked tickets, and manage flight details. It also includes administrative functionalities for managing flights and jets.
 
-Customers can:
+## Features
 
-Create an account
-Search for available flights for a particular city-pair
-Book tickets in the class of their choice
-Cancel booked tickets
-View booked tickets history
-Administrators can:
+- User registration and authentication
+- Flight booking and ticket management
+- Admin functionalities for managing flights and jets
+- Password reset functionality
+- Payment handling
 
-Add/Modify flight schedules
-Viewing the booked ticket statistics
-This system also incorporates a frequent flier miles points system for loyal customers which will provide additional benefits to them.
+We have added a new "Forgot Password" feature to enhance user experience and security. This feature allows users to reset their password if they forget it. Here is a description of how it works:
 
-This project was implemented using HTML & CSS for the front-end and PHP for the back-end. The database was created and updated using MySQL.
+Forgot Password Page (forgot_password.php):
+
+Users enter their registered email address.
+A reset link is sent to their email using PHPMailer.
+Forgot Password Handler (forgot_password_handler.php):
+
+Validates the email address.
+Generates a unique token and saves it in the database.
+Sends an email with the reset link containing the token.
+Reset Password Page (reset_password.php):
+
+Users access this page via the link sent to their email.
+They enter a new password.
+Reset Password Handler (reset_password_handler.php):
+
+Validates the token and new password.
+Updates the user's password in the database.
+
 
